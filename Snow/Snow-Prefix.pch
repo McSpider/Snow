@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'Snow' target in the 'Snow' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+  #import "cocos2d.h"
+#endif
