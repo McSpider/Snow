@@ -149,7 +149,7 @@
   cursorPos = [NSEvent mouseLocation];
   CGSize size = [[CCDirector sharedDirector] winSize];
 
-  if (NSPointInRect(cursorPos, NSMakeRect(50, 0, size.width-100, 1))) {
+  if (NSPointInRect(cursorPos, NSMakeRect(50, 0, size.width-100, 5))) {
     [[[[[CCDirector sharedDirector] view] window] animator] setAlphaValue:0.0f];
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:1];
   }
@@ -160,7 +160,7 @@
   cursorPos = [event locationInWindow];
   CGSize size = [[CCDirector sharedDirector] winSize];
 
-  if (NSPointInRect(cursorPos, NSMakeRect(50, 0, size.width-100, 1))) {
+  if (NSPointInRect(cursorPos, NSMakeRect(50, 0, size.width-100, 5))) {
     [self performSelector:@selector(checkTerminateState) withObject:nil afterDelay:3];
   } else {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(checkTerminateState) object:nil];
